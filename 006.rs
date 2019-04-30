@@ -9,8 +9,9 @@
 // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 // 
 // https://projecteuler.net/problem=6
+
 fn main() {
-    let sum_of_sq = (1..100).map(|x| x * x).sum::<i64>();
-    let sq_of_sum = (1..100).sum::<i64>().pow(2);
+    let sum_of_sq = (1..101).map(|x| x * x).sum::<i64>();
+    let sq_of_sum = (1..101).sum::<i64>().pow(2);
     println!("{}", sq_of_sum - sum_of_sq);
 }
