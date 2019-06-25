@@ -107,11 +107,11 @@ fn main() {
     for ten in first_tens {
         let val = ten
             .iter()
-            .map(|&x| x - 48)
-            .map(|d| std::char::from_digit(d.into(), 10).unwrap())
+            .map(|d| std::char::from_digit((d - 48).into(), 10).unwrap())
             .collect::<String>()
-            .parse::<u64>();
-        sum += val.unwrap();
+            .parse::<u64>()
+            .unwrap();
+        sum += val;
     }
     println!("{}", sum);
 }
